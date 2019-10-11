@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# be safe
+set -eu -o pipefail
+
+echo '################################'
+echo '#### Running YADM Bootstrap ####'
+echo '################################'
+
+
+echo 'Make sure yadm repo is accessed by SSH'
+yadm remote set-url origin "git@github.com:kgizdov/dotfiles.git"
