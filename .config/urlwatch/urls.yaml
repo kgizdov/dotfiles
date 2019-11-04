@@ -5,72 +5,84 @@ kind: url
 name: CERNRoot
 url: https://root.cern.ch/releases
 
+---
 # 2
 filter: html2text,grep:Release.*
 kind: url
 name: Python-uproot
 url: https://github.com/scikit-hep/uproot/releases/latest
 
+---
 # 3
 filter: html2text,grep:Release.*
 kind: url
 name: Python-awkward
 url: https://github.com/scikit-hep/awkward-array/releases/latest
 
+---
 # 4
 filter: html2text,grep:Release.*
 kind: url
 name: Python-uproot-methods
 url: https://github.com/scikit-hep/uproot-methods/releases/latest
 
+---
 # 5
 filter: html2text,grep:Release.*
 kind: url
 name: Python-root_numpy
 url: https://github.com/scikit-hep/root_numpy/releases/latest
 
+---
 # 6
 filter: html2text,grep:Release announcement
 kind: url
 name: XRootD
 url: http://xrootd.org/
 
+---
 # 7
 filter: html2text,grep:Release.*
 kind: url
 name: Vale
 url: https://github.com/errata-ai/vale/releases/latest
 
+---
 # 8
 filter: html2text
 kind: url
 name: simpletools
 url: https://github.com/cofitzpa/simpletools/commits/master
 
+---
 # 9
 filter: html2text,grep:Release.*
 kind: url
 name: Python-hep_ml
 url: https://github.com/arogozhnikov/hep_ml/releases/latest
 
+---
 # 10
 filter: html2text,grep:pythia.*tgz
 kind: url
 name: PythiaFTP
 url: http://home.thep.lu.se/~torbjorn/pythia8/
 
+---
 # 11
 filter: html2text,grep:pythia.*tgz
 kind: url
 name: PythiaIntro
 url: http://home.thep.lu.se/~torbjorn/pythiaaux/present.html
 
+---
 # 12
 filter: html2text,grep:5\.
 kind: url
 name: LLVM5
 url: http://releases.llvm.org/
 
+---
 # 13
 url: https://github.com/abseil/abseil-py/releases/latest
 name: absl-py
@@ -78,6 +90,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 14
 url: https://github.com/arrayfire/arrayfire/releases/latest
 name: arrayfire
@@ -85,6 +98,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 15
 url: https://github.com/bazelbuild/bazel/releases/latest
 name: bazel
@@ -92,6 +106,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 16
 url: https://github.com/dpiparo/vdt/releases/latest
 name: cern-vdt
@@ -99,31 +114,37 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 17
 url: https://developer.nvidia.com/cuda-toolkit-archive
 name: cuda
 filter: html2text,grep:Download
 
+---
 # 18
 url: https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/
 name: cuDNN
 filter: html2text,grep:libcudnn.*amd64.deb
 
+---
 # 19
 url: http://lcgapp.cern.ch/project/simu/HepMC/download/
 name: HepMC
 filter: grep:<a href.*>source</a>
 
+---
 # 20
 url: https://lhapdf.hepforge.org/downloads/
 name: LHAPDF
 filter: html2text,grep:LHAPDF-.*.tar.gz
 
+---
 # 21
 url: https://github.com/NVIDIA/nccl/tags
 name: NCCL
 filter: html2text,grep:v.*
 
+---
 # 22
 url: https://github.com/keras-team/keras-applications/releases/latest
 name: Keras Applications
@@ -131,6 +152,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 23
 url: https://github.com/keras-team/keras-preprocessing/releases/latest
 name: Keras Preprocessing
@@ -138,6 +160,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 24
 url: https://github.com/pytorch/pytorch/releases/latest
 name: PyTorch
@@ -145,6 +168,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 25
 url: https://github.com/tensorflow/tensorflow/releases/latest
 name: Tensorflow
@@ -152,6 +176,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 26
 url: https://github.com/tensorflow/tensorboard/releases/latest
 name: Tensorboard
@@ -159,6 +184,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 27
 url: https://github.com/ifduyue/python-xxhash/releases/latest
 name: python-xxhash
@@ -166,6 +192,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 28
 url: https://github.com/cpplint/cpplint/releases/latest
 name: cpplint
@@ -173,6 +200,7 @@ filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
 
+---
 # 29
 url: https://github.com/latex-lsp/texlab/releases/latest
 name: texlab
