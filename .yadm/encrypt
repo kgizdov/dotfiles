@@ -1,3 +1,5 @@
 .ssh/*
 .gnupg/*.asc
 .config/urlwatch/urlwatch.yaml
+.config/asciinema/config
+.config/syncthing/*
