@@ -207,3 +207,15 @@ name: texlab
 filter:
   - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
   - html2text: re
+---
+# 30
+url: https://sourceforge.net/projects/liblastfm/files
+name: libclastfm
+filter: html2text,grep:libclastfm.*\.tar\.gz$
+---
+# 31
+url: https://github.com/pragha-music-player/pragha/releases/latest
+name: pragha
+filter:
+  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - html2text: re
