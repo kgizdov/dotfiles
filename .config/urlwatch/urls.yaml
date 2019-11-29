@@ -84,34 +84,34 @@ url: http://releases.llvm.org/
 
 ---
 # 13
-url: https://github.com/abseil/abseil-py/releases/latest
+url: https://github.com/abseil/abseil-py/tags
 name: absl-py
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 14
-url: https://github.com/arrayfire/arrayfire/releases/latest
+url: https://github.com/arrayfire/arrayfire/tags
 name: arrayfire
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 15
-url: https://github.com/bazelbuild/bazel/releases/latest
+url: https://github.com/bazelbuild/bazel/tags
 name: bazel
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 16
-url: https://github.com/dpiparo/vdt/releases/latest
+url: https://github.com/dpiparo/vdt/tags
 name: cern-vdt
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
@@ -142,70 +142,72 @@ filter: html2text,grep:LHAPDF-.*.tar.gz
 # 21
 url: https://github.com/NVIDIA/nccl/tags
 name: NCCL
-filter: html2text,grep:v.*
+filter:
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
+  - html2text: re
 
 ---
 # 22
-url: https://github.com/keras-team/keras-applications/releases/latest
+url: https://github.com/keras-team/keras-applications/tags
 name: Keras Applications
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 23
-url: https://github.com/keras-team/keras-preprocessing/releases/latest
+url: https://github.com/keras-team/keras-preprocessing/tags
 name: Keras Preprocessing
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 24
-url: https://github.com/pytorch/pytorch/releases/latest
+url: https://github.com/pytorch/pytorch/tags
 name: PyTorch
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 25
-url: https://github.com/tensorflow/tensorflow/releases/latest
+url: https://github.com/tensorflow/tensorflow/tags
 name: Tensorflow
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 26
-url: https://github.com/tensorflow/tensorboard/releases/latest
+url: https://github.com/tensorflow/tensorboard/tags
 name: Tensorboard
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 27
-url: https://github.com/ifduyue/python-xxhash/releases/latest
+url: https://github.com/ifduyue/python-xxhash/tags
 name: python-xxhash
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 28
-url: https://github.com/cpplint/cpplint/releases/latest
+url: https://github.com/cpplint/cpplint/tags
 name: cpplint
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 
 ---
 # 29
-url: https://github.com/latex-lsp/texlab/releases/latest
+url: https://github.com/latex-lsp/texlab/tags
 name: texlab
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
 ---
 # 30
@@ -214,8 +216,8 @@ name: libclastfm
 filter: html2text,grep:libclastfm.*\.tar\.gz$
 ---
 # 31
-url: https://github.com/pragha-music-player/pragha/releases/latest
+url: https://github.com/pragha-music-player/pragha/tags
 name: pragha
 filter:
-  - xpath: '(//div[contains(@class,"release-timeline-tags")]//h4)[1]/a'
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
