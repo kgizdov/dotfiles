@@ -89,7 +89,7 @@ bindsym $mod+Shift+Ctrl+l exec swaylock -f -e -l -c 000000 -s fill -i /home/gizd
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-input * xkb_layout "gb, bg"
+input * xkb_layout "gb, bg, us"
 input * xkb_variant " , bas_phonetic"
 input * xkb_options "grp:win_space_toggle"
 input "1739:30382:DLL0704:01_06CB:76AE_Touchpad" {
