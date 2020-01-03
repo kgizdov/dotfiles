@@ -12,14 +12,21 @@
 # syslog
 # timing
 
-# REPOSITORY=emiko:/mnt/xpsbackup/borg
-REPOSITORY=dantooine:/mnt/xps/borg
-
+# export BORG_REPO=ssh://gizdov@emiko:15287/mnt/xpsbackup/borg
+export BORG_REPO=ssh://emiko/mnt/xpsbackup/borg
+# Setting this, so you won't be asked for your repository passphrase:
+export BORG_PASSPHRASE='1528796xZ'
 # check for more recent bup in /usr/local/
 # PATH=$PATH:/usr/local/bin
 
+# some helpers and error handling:
+info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
+trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
+
+info "Starting backup"
+
 # custom tag for manual backups
-tag=$1
+tag="${1}"
 
 # this is how you bootstrap the repo
 # borg init $REPOSITORY # todo: -e keyfile?
@@ -33,9 +40,10 @@ tag=$1
 # email fired from $0
 # EOF
 # else
-borg create                                                \
-        -verbose --stats --progress                        \
-        $REPOSITORY::$(hostname)-$(date +%Y-%m-%d)-$tag  / \
-        --exclude-from ./borg.exclude                      \
-        --exclude-caches
+borg create                                       \
+    -verbose --stats --progress --compression lz4 \
+    --exclude-from ./borg.exclude                 \
+    --exclude-caches                              \
+    ::"{hostname}-{now}-${tag}"                   \
+    /
 # fi
