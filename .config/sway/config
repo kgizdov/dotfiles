@@ -22,7 +22,7 @@ set $term gnome-terminal
 # set $menu dmenu_path | dmenu | xargs swaymsg exec
 set $menu "rofi -modi run, drun, window -show drun"
 # set $menu compgen -c | sort -u | fzf | xargs -r | swaymsg -t command exec
-# set $menu bemenu-run -i -p 'exec:'  --fn '$fontname $biggerfont'
+# set $menu bemenu-run -n -i -p 'exec:' --fn '$fontname $biggerfont'
 
 ### Output configuration
 #
