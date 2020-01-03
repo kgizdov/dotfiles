@@ -36,7 +36,14 @@ output * bg /usr/share/backgrounds/gnome/adwaita-night.jpg fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 # output eDP-1 resolution 3200x1800 position 0,0
-output eDP-1 resolution 3200x1800 position 1600,900 scale 2
+output eDP-1 resolution 3200x1800 position 0,0 scale 2
+# position is 3200/2 = 1600 to account for scale
+output DP-3 resolution 2560x1440 position 1600,0 scale 1
+
+# Docked mode, depends on systemd - /etc/systemd/logind.conf: HandleLidSwitchDocked=ignore
+set $laptop eDP-1
+bindswitch --reload lid:on output $laptop disable
+bindswitch --reload lid:off output $laptop enable
 
 ### Idle configuration
 #
