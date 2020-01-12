@@ -31,16 +31,30 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "custom/dell_kb": {
-        "format" : "⌨ {}",
+        // "format" : "⌨ {}",
+        // "format" : "{icon} {}",
+        "format" : "{icon}",
+        "format-icons": [
+            "🇧🇬",
+            "🇬🇧",
+            "🏳️"
+        ],
         "return-type" : "json",
-        "max-length": 50,
+        "max-length": 5,
         "interval": 1,
         "exec": "$HOME/.config/waybar/scripts/dell_keyboard_layout.sh 2> /dev/null"
     },
     "custom/code_kb": {
-        "format" : "⌨ {}",
+        // "format" : "⌨ {}",
+        // "format" : "{icon} {}",
+        "format" : "{icon}",
+        "format-icons": [
+            "🇧🇬",
+            "🇺🇸",
+            "🏳️"
+        ],
         "return-type" : "json",
-        "max-length": 50,
+        "max-length": 5,
         "interval": 1,
         "exec": "$HOME/.config/waybar/scripts/code_keyboard_layout.sh 2> /dev/null"
     },
