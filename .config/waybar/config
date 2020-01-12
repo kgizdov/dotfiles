@@ -9,7 +9,8 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     // "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
+    // "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["custom/dell_kb", "custom/code_kb", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -28,6 +29,20 @@
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "custom/dell_kb": {
+        "format" : "⌨ {}",
+        "return-type" : "json",
+        "max-length": 50,
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/scripts/dell_keyboard_layout.sh 2> /dev/null"
+    },
+    "custom/code_kb": {
+        "format" : "⌨ {}",
+        "return-type" : "json",
+        "max-length": 50,
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/scripts/code_keyboard_layout.sh 2> /dev/null"
     },
     "idle_inhibitor": {
         "format": "{icon}",

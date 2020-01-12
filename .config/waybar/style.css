@@ -199,3 +199,20 @@ label:focus {
 #mpd.paused {
     background-color: #51a37a;
 }
+
+#custom-dell_kb,
+#custom-code_kb {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: #ffffff;
+}
+
+#custom-dell_kb {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#custom-code_kb {
+    color: #ffffff;
+    background-color: #000000;
+}
