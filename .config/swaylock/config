@@ -3,3 +3,6 @@ ignore-empty-password
 indicator-caps-lock
 image=/home/gizdov/Downloads/backgrounds/eclipse.jpg
 scaling=fill
+color=000000
+# 'Fira Code Book' is custom and only works with custom font - https://github.com/tonsky/FiraCode/issues/641
+font='Fira Code Book'

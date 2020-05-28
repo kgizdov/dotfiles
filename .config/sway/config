@@ -61,11 +61,13 @@ output $laptop resolution 3200x1800 position 0,0 scale 2
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+#         timeout 300 'swaylock -f -e -l -c 000000 -s fill -i /home/gizdov/Downloads/backgrounds/eclipse.jpg' \
+# swaylock config in ~/.config/swaylock/config
 exec swayidle -w \
-        timeout 300 'swaylock -f -e -l -c 000000 -s fill -i /home/gizdov/Downloads/backgrounds/eclipse.jpg' \
+        timeout 300 'swaylock' \
         timeout 600 'swaymsg "output * dpms off"' \
              resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -e -l -c 000000 -s fill -i /home/gizdov/Downloads/backgrounds/eclipse.jpg'
+        before-sleep 'swaylock'
 
 # inhibit screenlock when in broswer fullscreen
 for_window [window_role="browser"] inhibit_idle fullscreen
@@ -74,10 +76,9 @@ for_window [window_role="browser"] inhibit_idle fullscreen
 for_window [app_id="gnome-mpv"] inhibit_idle fullscreen
 for_window [app_id="mpv"] inhibit_idle fullscreen
 
-# Lock the screen
-# 'Fira Code Book' is custom and only works with custom font - https://github.com/tonsky/FiraCode/issues/641
-# bindsym $mod+Shift+Ctrl+l exec swaylock -f -e -l -c 000000 -s fill -i /home/gizdov/Downloads/backgrounds/eclipse.jpg --font 'Fira Code Retina'
-bindsym $mod+Shift+Ctrl+l exec swaylock -f -e -l -c 000000 -s fill -i /home/gizdov/Downloads/backgrounds/eclipse.jpg --font 'Fira Code Book'
+# Manual lock
+# config in ~/.config/swaylock/config
+bindsym $mod+Shift+Ctrl+l exec swaylock
 
 ### Input configuration
 #
