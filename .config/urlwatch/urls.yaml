@@ -118,7 +118,7 @@ filter:
 # 17
 url: https://developer.nvidia.com/cuda-toolkit-archive
 name: cuda
-filter: html2text,grep:Download
+filter: html2text,grep:Latest Release
 
 ---
 # 18
