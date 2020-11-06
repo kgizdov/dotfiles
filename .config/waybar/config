@@ -1,16 +1,31 @@
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar at the bottom of your screen
-    // "height": 30, // Waybar height
+    "position": "top", // Waybar at the top of your screen
     "height": 22, // Waybar height
-    // "width": 1280, // Waybar width
+    "width": 1600, // Waybar width
     // Choose the order of the modules
-    // "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+        // "custom/spotify"
+    ],
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    // "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
-    // "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
-    "modules-right": ["custom/dell_kb", "custom/code_kb", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "custom/dell_kb",
+        // "custom/code_kb",
+        "idle_inhibitor",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "backlight",
+        "battery",
+        "clock",
+        "tray"
+    ],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -29,6 +44,9 @@
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+        "max-length": 40
     },
     "custom/dell_kb": {
         // "format" : "⌨ {}",
@@ -95,14 +113,15 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    // "battery#bat2": {
-    //     "bat": "BAT2"
-    // },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
+        "format-wifi": " {essid:.5} ({signalStrength}%)",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "⚠ Disconnected",
+        "max-length":14
     },
     "pulseaudio": {
         //"scroll-step": 1,
@@ -119,10 +138,10 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
-    }  // Don't forget the comma after
-    // "custom/spotify": {
-    //     "format": " {}",
-    //     "max-length": 40,
-    //     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    // }
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    }
 }
