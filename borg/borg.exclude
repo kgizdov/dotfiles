@@ -14,9 +14,11 @@
 /var/cache/*
 /var/tmp/*
 /var/log/*
+/var/lib/archbuild/*
 /var/lib/cvmfs/*
 /var/lib/docker/*
 /var/lib/libvirt/images/*
+/var/lib/snapd/*
 *coredump*
 *.git
 *.img

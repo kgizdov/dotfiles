@@ -26,7 +26,7 @@ trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 info "Starting backup"
 
 # custom tag for manual backups
-tag="${1}"
+tag="${1:-1}"
 
 # this is how you bootstrap the repo
 # borg init $REPOSITORY # todo: -e keyfile?
@@ -40,10 +40,10 @@ tag="${1}"
 # email fired from $0
 # EOF
 # else
-borg create                                       \
-    -verbose --stats --progress --compression lz4 \
-    --exclude-from ./borg.exclude                 \
-    --exclude-caches                              \
-    ::"{hostname}-{now}-${tag}"                   \
-    /
+borg create                       \
+    ::"{hostname}-{now}-${tag}" / \
+    --verbose --stats --progress  \
+    --compression lz4             \
+    --exclude-from ./borg.exclude \
+    --exclude-caches
 # fi
