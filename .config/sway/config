@@ -4,6 +4,10 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+### Start some stuff
+# requires network-manager-applet
+exec nm-applet --indicator
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
