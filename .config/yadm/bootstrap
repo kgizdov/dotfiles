@@ -13,6 +13,6 @@ yadm remote set-url origin "git@github.com:kgizdov/dotfiles.git"
 
 echo 'Set sparse-checkout to drop LICENSE and README.md'
 yadm gitconfig core.sparsecheckout true
-echo '/*' > "${HOME}/.yadm/repo.git/info/sparse-checkout"
-echo '!LICENSE' >> "${HOME}/.yadm/repo.git/info/sparse-checkout"
-echo '!README.md' >> "${HOME}/.yadm/repo.git/info/sparse-checkout"
+echo '/*' > "${HOME}/.local/share/yadm/repo.git/info/sparse-checkout"
+echo '!LICENSE' >> "${HOME}/.local/share/yadm/repo.git/info/sparse-checkout"
+echo '!README.md' >> "${HOME}/.local/share/yadm/repo.git/info/sparse-checkout"

@@ -221,3 +221,10 @@ name: pragha
 filter:
   - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
   - html2text: re
+---
+# 32
+url: https://github.com/NeoRaider/fastd/tags
+name: fastd
+filter:
+  - xpath: '(//h4[contains(@class,"commit-title")])[1]//a'
+  - html2text: re
